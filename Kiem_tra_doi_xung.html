@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPalindrome(array) {
+        if (array.length<=1){
+            return true;
+        }
+        let fistChar= array[0];
+        let lastChar= array[array.length-1];
+        if ( fistChar===lastChar){
+            array.shift();
+            array.pop();
+            return  isPalindrome(array);
+        }else {
+            return false;
+        }
+
+    }
+    let str1= "orh6hro";
+    let array1= str1.split("");
+    let result= isPalindrome(array1);
+    console.log(result);
+</script>
+</body>
+</html>
